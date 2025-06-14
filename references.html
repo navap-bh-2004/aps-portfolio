@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>References & Sources | APS Portfolio</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/style2.css">
+    <link rel="stylesheet" href="./styles/case-study-2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .ref-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 40px;
+            background: #f8fafc;
+            min-height: 100vh;
+        }
+        
+        .ref-header {
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .ref-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #4a90e2, #60a5fa);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        
+        .ref-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 0;
+        }
+        
+        .back-to-cases {
+            margin-bottom: 40px;
+        }
+        
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 20px;
+            background: #4a90e2;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .back-button i {
+            margin-right: 8px;
+        }
+        
+        .algorithm-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .algorithm-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .algorithm-title i {
+            margin-right: 12px;
+            color: #4a90e2;
+        }
+        
+        .ref-category {
+            margin-bottom: 25px;
+        }
+        
+        .category-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #16213e;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        
+        .ref-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .ref-item {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-left: 3px solid #4a90e2;
+            transition: all 0.3s ease;
+        }
+        
+        .ref-item:hover {
+            background: #e2e8f0;
+            transform: translateX(5px);
+        }
+        
+        .ref-link {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .ref-link:hover {
+            color: #357abd;
+            text-decoration: underline;
+        }
+        
+        .ref-description {
+            font-size: 0.9rem;
+            color: #64748b;
+            margin: 0;
+        }
+        
+        .ref-author {
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-style: italic;
+        }
+        
+        .code-implementations {
+            background: #1a1a2e;
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .code-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #60a5fa;
+        }
+        
+        .code-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .code-card {
+            background: rgba(96, 165, 250, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+        }
+        
+        .code-card h4 {
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+        
+        .code-card a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+        
+        .code-card a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .ref-container {
+                padding: 40px 15px;
+            }
+            
+            .ref-title {
+                font-size: 2rem;
+            }
+            
+            .algorithm-section {
+                padding: 20px;
+            }
+            
+            .code-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ref-container">
+        <div class="ref-header">
+            <h1 class="ref-title">References & Sources</h1>
+            <p class="ref-subtitle">Academic papers, documentation, and research materials for Amazon algorithm case studies</p>
+        </div>
+        
+        <div class="back-to-cases">
+            <a href="business-cases.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Case Studies
+            </a>
+        </div>
+
+        <!-- String Processing Algorithms -->
+        <div class="algorithm-section">
+            <h2 class="algorithm-title">
+                <i class="fas fa-search"></i>
+                String Processing & Search Algorithms
+            </h2>
+            
+            <div class="ref-category">
+                <h3 class="category-title">Suffix Trees & Suffix Arrays</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf" class="ref-link" target="_blank">
+                            On-line Construction of Suffix Trees
+                        </a>
+                        <p class="ref-description">Ukkonen's seminal paper on linear-time suffix tree construction</p>
+                        <p class="ref-author">Esko Ukkonen, 1995</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://web.stanford.edu/class/cs97si/suffix-array.pdf" class="ref-link" target="_blank">
+                            Suffix Arrays - Introduction and Applications
+                        </a>
+                        <p class="ref-description">Comprehensive guide to suffix arrays and their applications</p>
+                        <p class="ref-author">Stanford University</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1145/322248.322254" class="ref-link" target="_blank">
+                            Fast Pattern Matching in Strings
+                        </a>
+                        <p class="ref-description">Knuth-Morris-Pratt algorithm original publication</p>
+                        <p class="ref-author">Knuth, Morris, Pratt, 1977</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Trie Data Structures</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://dl.acm.org/doi/10.1145/356770.356776" class="ref-link" target="_blank">
+                            Retrieval on Secondary Keys
+                        </a>
+                        <p class="ref-description">Original paper introducing trie data structure concepts</p>
+                        <p class="ref-author">Fredkin, 1960</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://www.cs.princeton.edu/~rs/strings/tries.pdf" class="ref-link" target="_blank">
+                            Ternary Search Trees
+                        </a>
+                        <p class="ref-description">Efficient string search using ternary search trees</p>
+                        <p class="ref-author">Princeton University</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Graph Algorithms -->
+        <div class="algorithm-section">
+            <h2 class="algorithm-title">
+                <i class="fas fa-project-diagram"></i>
+                Graph Algorithms & Network Optimization
+            </h2>
+            
+            <div class="ref-category">
+                <h3 class="category-title">Shortest Path Algorithms</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1007/BF01386390" class="ref-link" target="_blank">
+                            A Note on Two Problems in Connexion with Graphs
+                        </a>
+                        <p class="ref-description">Dijkstra's algorithm original publication</p>
+                        <p class="ref-author">Edsger W. Dijkstra, 1959</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1145/321021.321022" class="ref-link" target="_blank">
+                            On the Shortest Spanning Subtree and the Traveling Salesman Problem
+                        </a>
+                        <p class="ref-description">Bellman-Ford algorithm for shortest paths with negative weights</p>
+                        <p class="ref-author">Bellman, 1958</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1109/TSSC.1968.300136" class="ref-link" target="_blank">
+                            A Formal Basis for the Heuristic Determination of Minimum Cost Paths
+                        </a>
+                        <p class="ref-description">A* algorithm original research paper</p>
+                        <p class="ref-author">Hart, Nilsson, Raphael, 1968</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Network Flow & Matching</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.4153/CJM-1957-007-2" class="ref-link" target="_blank">
+                            Maximal Flow Through a Network
+                        </a>
+                        <p class="ref-description">Ford-Fulkerson algorithm for maximum flow problems</p>
+                        <p class="ref-author">Ford & Fulkerson, 1956</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1137/0201010" class="ref-link" target="_blank">
+                            An Algorithm for Maximum Matching in Bipartite Graphs
+                        </a>
+                        <p class="ref-description">Hungarian algorithm for assignment problems</p>
+                        <p class="ref-author">Kuhn, 1955</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://www.jstor.org/stable/2308750" class="ref-link" target="_blank">
+                            College Admissions and the Stability of Marriage
+                        </a>
+                        <p class="ref-description">Stable marriage algorithm original paper</p>
+                        <p class="ref-author">Gale & Shapley, 1962</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Minimum Spanning Trees</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1090/S0002-9939-1956-0078686-7" class="ref-link" target="_blank">
+                            On the Shortest Spanning Subtree of a Graph
+                        </a>
+                        <p class="ref-description">Kruskal's algorithm for minimum spanning trees</p>
+                        <p class="ref-author">Joseph Kruskal, 1956</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1002/j.1538-7305.1957.tb01515.x" class="ref-link" target="_blank">
+                            Shortest Connection Networks and Some Generalizations
+                        </a>
+                        <p class="ref-description">Prim's algorithm for minimum spanning trees</p>
+                        <p class="ref-author">Robert Prim, 1957</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Data Structures -->
+        <div class="algorithm-section">
+            <h2 class="algorithm-title">
+                <i class="fas fa-database"></i>
+                Advanced Data Structures
+            </h2>
+            
+            <div class="ref-category">
+                <h3 class="category-title">Tree Structures</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1007/BF00289509" class="ref-link" target="_blank">
+                            A Data Structure for Dynamic Information
+                        </a>
+                        <p class="ref-description">Segment trees for range queries</p>
+                        <p class="ref-author">Bentley, 1977</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1007/BF00264289" class="ref-link" target="_blank">
+                            A New Data Structure for Cumulative Frequency Tables
+                        </a>
+                        <p class="ref-description">Binary Indexed Trees (Fenwick Trees)</p>
+                        <p class="ref-author">Peter Fenwick, 1994</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1145/3828.3835" class="ref-link" target="_blank">
+                            Skip Lists: A Probabilistic Alternative to Balanced Trees
+                        </a>
+                        <p class="ref-description">Skip lists data structure</p>
+                        <p class="ref-author">William Pugh, 1990</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Heap & Priority Structures</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1145/512274.512284" class="ref-link" target="_blank">
+                            Algorithm 232: Heapsort
+                        </a>
+                        <p class="ref-description">Binary heap implementation and heapsort</p>
+                        <p class="ref-author">Floyd, 1964</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://www.cs.cmu.edu/~sleator/papers/self-adjusting.pdf" class="ref-link" target="_blank">
+                            Self-Adjusting Binary Search Trees
+                        </a>
+                        <p class="ref-description">Splay trees and self-organizing data structures</p>
+                        <p class="ref-author">Sleator & Tarjan, 1985</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Union-Find & Disjoint Sets</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1145/321879.321884" class="ref-link" target="_blank">
+                            Efficiency of a Good But Not Linear Set Union Algorithm
+                        </a>
+                        <p class="ref-description">Union-Find with path compression analysis</p>
+                        <p class="ref-author">Tarjan, 1975</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://dl.acm.org/doi/10.1145/62.2160" class="ref-link" target="_blank">
+                            Worst-case Analysis of Set Union Algorithms
+                        </a>
+                        <p class="ref-description">Comprehensive analysis of disjoint set operations</p>
+                        <p class="ref-author">Tarjan & van Leeuwen, 1984</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Algorithm Techniques -->
+        <div class="algorithm-section">
+            <h2 class="algorithm-title">
+                <i class="fas fa-cogs"></i>
+                Algorithm Techniques & Optimization
+            </h2>
+            
+            <div class="ref-category">
+                <h3 class="category-title">Dynamic Programming</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://web.mit.edu/dimitrib/www/dpchapter.pdf" class="ref-link" target="_blank">
+                            Dynamic Programming and Optimal Control
+                        </a>
+                        <p class="ref-description">Comprehensive guide to dynamic programming techniques</p>
+                        <p class="ref-author">Dimitri Bertsekas, MIT</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1137/0202012" class="ref-link" target="_blank">
+                            The Longest Common Subsequence Problem
+                        </a>
+                        <p class="ref-description">LCS algorithm analysis and applications</p>
+                        <p class="ref-author">Hirschberg, 1975</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Compression & Encoding</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1109/TIT.1952.1162024" class="ref-link" target="_blank">
+                            A Method for the Construction of Minimum-Redundancy Codes
+                        </a>
+                        <p class="ref-description">Huffman coding algorithm original paper</p>
+                        <p class="ref-author">David Huffman, 1952</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://ieeexplore.ieee.org/document/1057463" class="ref-link" target="_blank">
+                            Data Compression Using Adaptive Coding and Partial String Matching
+                        </a>
+                        <p class="ref-description">Advanced compression techniques and applications</p>
+                        <p class="ref-author">Bell, Cleary, Witten, 1987</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Cache & Memory Management</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://doi.org/10.1145/356770.356776" class="ref-link" target="_blank">
+                            A Study of Replacement Algorithms for Virtual-Storage Computer
+                        </a>
+                        <p class="ref-description">LRU and cache replacement algorithms</p>
+                        <p class="ref-author">Belady, 1966</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://www.usenix.org/legacy/publications/library/proceedings/osdi99/full_papers/pai/pai.pdf" class="ref-link" target="_blank">
+                            IO-Lite: A Unified I/O Buffering and Caching System
+                        </a>
+                        <p class="ref-description">Modern caching strategies and implementation</p>
+                        <p class="ref-author">Pai, Druschel, Zwaenepoel, 1999</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Amazon-Specific Research -->
+        <div class="algorithm-section">
+            <h2 class="algorithm-title">
+                <i class="fas fa-amazon"></i>
+                Amazon & Industry Applications
+            </h2>
+            
+            <div class="ref-category">
+                <h3 class="category-title">E-commerce & Recommendation Systems</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://www.cs.umd.edu/~samir/498/Amazon-Recommendations.pdf" class="ref-link" target="_blank">
+                            Amazon.com Recommendations: Item-to-Item Collaborative Filtering
+                        </a>
+                        <p class="ref-description">Amazon's recommendation algorithm research</p>
+                        <p class="ref-author">Linden, Smith, York, 2003</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://www.computer.org/csdl/magazine/ic/2003/01/w1076/13rRUxBJhBm" class="ref-link" target="_blank">
+                            Recommender Systems in E-commerce
+                        </a>
+                        <p class="ref-description">Comprehensive overview of e-commerce recommendation systems</p>
+                        <p class="ref-author">Schafer, Konstan, Riedl, 2001</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">PageRank & Trust Networks</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf" class="ref-link" target="_blank">
+                            The PageRank Citation Ranking: Bringing Order to the Web
+                        </a>
+                        <p class="ref-description">Original PageRank algorithm paper</p>
+                        <p class="ref-author">Page, Brin, Motwani, Winograd, 1999</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://web.stanford.edu/~ullman/mmds/ch5.pdf" class="ref-link" target="_blank">
+                            Link Analysis: PageRank and HITS
+                        </a>
+                        <p class="ref-description">Comprehensive analysis of link-based ranking algorithms</p>
+                        <p class="ref-author">Stanford University</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Distributed Systems & Cloud Computing</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf" class="ref-link" target="_blank">
+                            Dynamo: Amazon's Highly Available Key-value Store
+                        </a>
+                        <p class="ref-description">Amazon's distributed storage system design</p>
+                        <p class="ref-author">DeCandia et al., 2007</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://aws.amazon.com/whitepapers/" class="ref-link" target="_blank">
+                            AWS Architecture Center
+                        </a>
+                        <p class="ref-description">Amazon Web Services architecture patterns and best practices</p>
+                        <p class="ref-author">Amazon Web Services</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="ref-category">
+                <h3 class="category-title">Reference Books</h3>
+                <ul class="ref-list">
+                    <li class="ref-item">
+                        <a href="https://mitpress.mit.edu/books/introduction-algorithms-third-edition" class="ref-link" target="_blank">
+                            Introduction to Algorithms (CLRS)
+                        </a>
+                        <p class="ref-description">The definitive textbook on algorithms and data structures</p>
+                        <p class="ref-author">Cormen, Leiserson, Rivest, Stein</p>
+                    </li>
+                    <li class="ref-item">
+                        <a href="https://www.amazon.com/Algorithm-Design-Jon-Kleinberg/dp/0321295358" class="ref-link" target="_blank">
+                            Algorithm Design
+                        </a>
+                        <p class="ref-description">Practical approach to algorithm design and analysis</p>
+                        <p class="ref-author">Kleinberg & Tardos</p>
+                    </li>
+                </ul>
+            </div>
+
+        <div class="back-to-cases" style="text-align: center; margin-top: 60px;">
+            <a href="business-cases.html" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                Back to Case Studies
+            </a>
+            <a href="index.html" class="back-button" style="margin-left: 20px; background: #16213e;">
+                <i class="fas fa-home"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </div>
+</body>
+</html>
